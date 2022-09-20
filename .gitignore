@@ -1,2 +1,3 @@
 echo .DS_Store >> .gitignore
 api/db/data/
+node_modules
