@@ -1,2 +1,2 @@
 echo .DS_Store >> .gitignore
-api/db/data
+api/db/data/
