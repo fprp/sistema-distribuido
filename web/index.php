@@ -1,3 +1,9 @@
+<?php
+#session_start();
+#require_once('metodos/verificador.php');
+#verificador('paginas/tela-login.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +38,9 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <form method="post" action="paginas/tela-nova-sessao.php">
+            <input type='submit' name='botao' value='Adicionar nova sessão' class='adicionar' />
+        </form>
     </div>
 </body>
 </html>
