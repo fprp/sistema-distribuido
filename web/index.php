@@ -12,6 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema</title>
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
+    <link rel="stylesheet" href="css/botao.css">  
 </head>
 <body>
     <?php
@@ -31,9 +33,10 @@
             <tbody>
                 <?php foreach($filmes as $filme): ?>
                     <tr class="table-primary">
-                        <td><?php echo $filme->Nome_do_Filme; ?></td>
+                        <td><?php echo $filme->Nome_do_Filme; ?> </td>
                         <td><?php echo $filme->Numero_da_Sala; ?></td>
                         <td><?php echo $filme->Dia_e_Hora_da_Sessao; ?></td>
+                        <td><td><span onclick= "window.location.href='metodos/deletar.php?id=<?php echo $filme->id;?>'" id="boot-icon" class="bi bi-trash" style="font-size: 21px; color: rgb(17, 17, 70);"></span></td></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

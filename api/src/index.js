@@ -31,7 +31,7 @@ app.get('/filmes', function(req, res) {
       throw error
     };
 
-    res.send(results.map(item => ({ Nome_do_Filme: item.nome_do_filme, Numero_da_Sala: item.numero_da_sala, Dia_e_Hora_da_Sessao: item.dia_e_hora_da_sessao})));
+    res.send(results.map(item => ({ id: item.id, Nome_do_Filme: item.nome_do_filme, Numero_da_Sala: item.numero_da_sala, Dia_e_Hora_da_Sessao: item.dia_e_hora_da_sessao})));
   });
 });
 
