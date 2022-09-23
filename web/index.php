@@ -20,17 +20,17 @@
     ?>
 
     <div class="container">
-        <table class="table">
+        <table class="table table-hover table-borderless">
             <thead>
                 <tr>
-                    <th>Filme</th>
-                    <th>Sala</th>
-                    <th>Dia e Hora</th>
+                    <th scope="col">Filme</th>
+                    <th scope="col">Sala</th>
+                    <th scope="col">Dia e Hora</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach($filmes as $filme): ?>
-                    <tr>
+                    <tr class="table-primary">
                         <td><?php echo $filme->Nome_do_Filme; ?></td>
                         <td><?php echo $filme->Numero_da_Sala; ?></td>
                         <td><?php echo $filme->Dia_e_Hora_da_Sessao; ?></td>
@@ -39,7 +39,7 @@
             </tbody>
         </table>
         <form method="post" action="paginas/tela-nova-sessao.php">
-            <input type='submit' name='botao' value='Adicionar nova sessão' class='adicionar' />
+            <input type='submit' name='botao' value='Adicionar nova sessão' class= "btn btn-primary btn-block" />
         </form>
     </div>
 </body>
