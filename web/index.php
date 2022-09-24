@@ -1,7 +1,7 @@
 <?php
-#session_start();
-#require_once('metodos/verificador.php');
-#verificador('paginas/tela-login.php');
+session_start();
+require_once('metodos/verificador.php');
+verificador('paginas/tela-login.php');
 ?>
 
 <!DOCTYPE html>
@@ -41,9 +41,25 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <form method="post" action="paginas/tela-nova-sessao.php">
-            <input type='submit' name='botao' value='Adicionar nova sessão' class= "btn btn-primary btn-block" />
-        </form>
+
+        <div class="botoes">
+            <div class="box">
+                <div class="box-row">
+                    <div class="box-cell box1">
+                        <form method="post" action="paginas/tela-nova-sessao.php">
+                            <input type='submit' name='botao' value='Adicionar nova sessão' class= "btn btn-primary btn-block" />
+                        </form>
+                    </div>
+                    <div class="box-cell box2">
+                        <form action="metodos/sair.php">
+                            <a href=''>
+                                <input type='submit' name='botao' value='Sair' class= "btn btn-primary btn-block" />
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
