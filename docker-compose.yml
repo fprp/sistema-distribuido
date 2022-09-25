@@ -1,5 +1,17 @@
 version: "3.7"
 services: 
+  rabbitmq:
+      image: rabbitmq:3-management
+      container_name: rabbitmq-container
+      restart: always
+      ports:
+        - 5672:5672
+        - 15672:15672
+      volumes:
+        - ./rabbitmq/dados:/var/lib/rabbitmq/
+      environment:
+        - RABBITMQ_DEFAULT_USER=admin
+        - RABBITMQ_DEFAULT_PASS=admin
   db: 
     image: mysql
     container_name: mysql-container
@@ -30,3 +42,30 @@ services:
     depends_on:
       - db
       - api
+      - rabbitmq
+  web2:
+    image: "php:7.2-apache"
+    container_name: php-container-r
+    restart: always
+    volumes:
+      - ./web:/var/www/html
+    ports:
+      - "8888:80"
+    command: 
+      - php -f receive.php
+    depends_on:
+      - db
+      - api
+      - rabbitmq
+  web3:
+    image: "php:7.2-apache"
+    container_name: php-container-s
+    restart: always
+    volumes:
+      - ./web:/var/www/html
+    command: 
+      - php -f send.php
+    depends_on:
+      - db
+      - api
+      - rabbitmq
