@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinema - Login</title>
+    <title>Cinema - login</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -30,12 +30,16 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="../metodos/login.php" method="post" role="form" style="display: block;" enctype="multipart/form-data">
+								<form id="login-form" action="./metodos/login" method="post" role="form" style="display: block;" enctype="multipart/form-data">
 									<div class="form-group">
 										<input type="email" name="email" id="username-l" tabindex="1" class="form-control" placeholder="E-mail" value="">
 									</div>
 									<div class="form-group">
-										<input type="password" name="senha" id="password-l" tabindex="2" class="form-control" placeholder="Senha">
+										<input type="password" name="password" id="password-l" tabindex="2" class="form-control" placeholder="Senha">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember Me</label>
 									</div>
 									<div class="form-group">
 										<div class="row">
@@ -44,19 +48,28 @@
 											</div>
 										</div>
 									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</form>
-								<form id="register-form" action="../metodos/adicionar-usuario.php" method="post" role="form" style="display: none;">
+								<form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
 									<div class="form-group">
-										<input type="text" name="nome-r" id="nome-r" tabindex="1" class="form-control" placeholder="Nome" value="">
+										<input type="text" name="username" id="username-r" tabindex="1" class="form-control" placeholder="E-mail" value="">
 									</div>
 									<div class="form-group">
-										<input type="email" name="email-r" id="email-r" tabindex="1" class="form-control" placeholder="E-mail" value="">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
 									</div>
 									<div class="form-group">
-										<input type="password" name="senha-r" id="Senha-r" tabindex="2" class="form-control" placeholder="Senha">
+										<input type="password" name="password" id="password-r" tabindex="2" class="form-control" placeholder="Senha">
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirme-a-senha-r" id="Confirme-a-senha-r" tabindex="2" class="form-control" placeholder="Confirme a senha">
+										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirme a senha">
 									</div>
 									<div class="form-group">
 										<div class="row">

@@ -1,9 +1,3 @@
-<?php
-session_start();
-require_once('../metodos/verificador.php');
-verificador('../paginas/tela-login.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
