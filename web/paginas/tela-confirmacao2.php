@@ -45,10 +45,10 @@ verificador('../paginas/tela-login.php');
     <body>
       <div class="card">
       <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
-        <i style="color: #2b2bb3;" class="checkmark">✓</i>
+          <i style="color: #2b2bb3;" class="checkmark">✓</i>
       </div>
-        <h1>Sessão removida</h1> 
-        <p><a href='/index.php'>Clique aqui para voltar</a></p>
+        <h1>Usuário cadastrado</h1> 
+        <p><a href='tela-login.php'>Clique aqui para voltar pro login</a></p>
       </div>
     </body>
 </html>
