@@ -1,17 +1,5 @@
 version: "3.7"
 services: 
-  rabbitmq:
-      image: rabbitmq:3-management
-      container_name: rabbitmq-container
-      restart: always
-      ports:
-        - 5672:5672
-        - 15672:15672
-      volumes:
-        - ./rabbitmq/dados:/var/lib/rabbitmq/
-      environment:
-        - RABBITMQ_DEFAULT_USER=admin
-        - RABBITMQ_DEFAULT_PASS=admin
   db: 
     image: mysql
     container_name: mysql-container
@@ -41,5 +29,9 @@ services:
       - "8888:80"
     depends_on:
       - db
+<<<<<<< HEAD
       - api
       - rabbitmq
+=======
+      - api
+>>>>>>> parent of e9d2bba (suporte ao rabbitmq)
